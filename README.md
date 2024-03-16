@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+Fetch Tasks Data
+use a GET Request in App.js to tasks end-point in our json server.
+keep data in Parent Component App.js
+  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TaskList
+ we'll want to display all the tasks in our app. Pass down the task data from App to TaskList, and display each task using the Task component.
 
-## Available Scripts
+Task
+Set up the Task component so that it shows the task's text and category.
 
-In the project directory, you can run:
+Add a delete button in the same div.
 
-### `npm start`
+When the delete button is clicked, Send a DELETE request to our server and also the task should be removed from the list(without a refresh).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+CategoryFilter
+copy and paste  ["All", "Code", "Food", "Money", "Misc"] set to categories state.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pass the list of categories to this component from App. Then, update this component to display <button> elements for each category. 
 
-### `npm test`
+When a button is clicked, the following should happen:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Whichever button was clicked should have a class of selected. The other buttons should not have any class assigned. The selected classname should have some css to make selected button pop out in contrast to the others. 
+The list of tasks being displayed should be filtered, so that only tasks that match the category that was clicked are displayed.
+If the button for "All" is selected, all the tasks should be displayed.
 
-### `npm run build`
+NewTaskForm
+Pass the list of categories to this component from App.  This component will display <option> elements for each category inside of the <select> element except the "All" category, so that the user can select a category when adding a new task.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next, update this form to be a controlled component, so that all form inputs are captured in state.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the form is submitted, add a new task to the list with the text and category from the form. The form submition will trigger a POST request to the server.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+EditTaskForm
+ create a controller form and Send a Patch request to the json-server with the new data.
+ This component will display <option> elements for each category inside of the <select> element except the "All" category, so that the user can select a category when updating a new task      .
