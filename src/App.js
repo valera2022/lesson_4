@@ -6,7 +6,16 @@ import Tasklist from './Tasklist';
 
 function App() {
   const [tasks,setTasks] = useState([])
+  
 
+
+  function handleDeleteTask(id){
+    console.log(id)
+     let filteredTasks = tasks.filter((task)=> task.id !== id)
+     setTasks(filteredTasks)
+  }
+
+ 
 
   useEffect(()=>{
           fetch("http://localhost:4000/tasks")
@@ -17,7 +26,7 @@ function App() {
   return (
     <div className="App">
    
-    <Tasklist tasks={tasks  }/>
+    <Tasklist onDelete={handleDeleteTask}  tasks={tasks  }/>
       
     </div>
   );
