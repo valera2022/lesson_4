@@ -2,10 +2,12 @@
 import './App.css';
 import { useEffect ,useState} from 'react';
 import Tasklist from './Tasklist';
+import CategoryFilter from './CategoryFilter';
 
 
 function App() {
   const [tasks,setTasks] = useState([])
+  const [categories,setCategories] = useState(["All", "Code", "Food", "Money", "Misc"])
   
 
 
@@ -25,6 +27,8 @@ function App() {
      
   return (
     <div className="App">
+       <CategoryFilter key={cat.id} cat={cat}/>
+  
    
     <Tasklist onDelete={handleDeleteTask}  tasks={tasks  }/>
       
