@@ -1,11 +1,6 @@
 {
   "tasks": [
     {
-      "id": "5",
-      "text": "Get an ISA",
-      "category": "Money"
-    },
-    {
       "id": "6",
       "text": "Cook rice",
       "category": "Food"

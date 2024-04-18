@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-export default function CategoryFilter({cat}) {
+export default function CategoryFilter({categories}) {
+  console.log(categories)
     const [selected,setSelected] = useState("")
 // 1.When a button is clicked, 
       //add event onClick
@@ -17,15 +18,20 @@ export default function CategoryFilter({cat}) {
 // 5.If the button for "All" is selected, all the tasks should be displayed.
     //maybe if statement for all , else statement for  filter
 
- function handleClick(){
-    setSelected("selected")
-}
+//  function handleClick(){
+//     setSelected()
+// }
 
+let categoriesTodisplay = categories.map((cat)=>{
+  let className = cat === selected? "selected" : null
 
-    
-  return (<div>
+  return (
        
-        <button class={selected} onClick={handleClick}>{cat}</button>
-        </div>
-  )
+    <button class={className} onClick={()=> setSelected(cat)}>{cat}</button>
+    
+)
+})
+
+    return<div>{categoriesTodisplay}</div> 
+ 
 }

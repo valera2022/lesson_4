@@ -27,7 +27,7 @@ function App() {
      
   return (
     <div className="App">
-       <CategoryFilter key={cat.id} cat={cat}/>
+       <CategoryFilter categories={categories} />
   
    
     <Tasklist onDelete={handleDeleteTask}  tasks={tasks  }/>
