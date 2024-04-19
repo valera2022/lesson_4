@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-export default function CategoryFilter({categories}) {
+export default function CategoryFilter({categories,setSelected,selected}) {
   console.log(categories)
-    const [selected,setSelected] = useState("")
+   
 // 1.When a button is clicked, 
       //add event onClick
          
