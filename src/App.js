@@ -26,11 +26,11 @@ function App() {
   },[])
      
   return (
-    <div className="App">
+    <div className="main-container">
        <CategoryFilter setSelected={setSelected} selected={selected}categories={categories} />
   
    
-    <Tasklist onDelete={handleDeleteTask} selected={selected} tasks={tasks  }/>
+     <Tasklist onDelete={handleDeleteTask} selected={selected} tasks={tasks  }/>
       
     </div>
   );
