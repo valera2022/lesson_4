@@ -23,11 +23,11 @@ export default function CategoryFilter({categories,setSelected,selected}) {
 // }
 
 let categoriesTodisplay = categories.map((cat)=>{
-  let className = cat === selected? "selected" : null
+  let className = cat === selected? "selected" : "non-selected"
 
   return (
        
-    <button class={className} onClick={()=> setSelected(cat)}>{cat}</button>
+    <div class={className} onClick={()=> setSelected(cat)}>{cat}</div>
     
 )
 })

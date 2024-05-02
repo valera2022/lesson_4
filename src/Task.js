@@ -33,14 +33,26 @@ export default function Task({task,onDelete,selected}) {
   }
 
   return (
-    <div>
-      <ul>
-        <li>
+  <div  >
+    <div className='tasklist'>
+     <ul>
+      <li>
       {task.text}
-        </li>
-        {task.category}
-        <button onClick={handleClick}>Delete</button>
-      </ul>
+      </li>
+     </ul>
+        <div className='category'>
+        {"Category: " + task.category}
+        </div>
+     
+    </div>
+     
+        {/* <br></br> */}
+      
+    
+        <div className='deletebutton'>
+        <button className="button" onClick={handleClick}>Delete</button>
+        </div>
+      
       
       
     </div>

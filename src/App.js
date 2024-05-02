@@ -8,7 +8,7 @@ import CategoryFilter from './CategoryFilter';
 function App() {
   const [tasks,setTasks] = useState([])
   const [categories,setCategories] = useState(["All", "Code", "Food", "Money", "Misc"])
-  const [selected,setSelected] = useState("")
+  const [selected,setSelected] = useState("All")
 
 
   function handleDeleteTask(id){
