@@ -1,11 +1,6 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "text": "Save a tenner",
-      "category": "Money"
-    },
-    {
       "id": "3",
       "text": "Build a todo app",
       "category": "Code"
