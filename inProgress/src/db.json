@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": "4",
+      "text": "Build todo API",
+      "category": "Code"
+    },
+    {
+      "id": "5",
+      "text": "Get an ISA",
+      "category": "Money"
+    },
+    {
+      "id": "6",
+      "text": "Cook rice",
+      "category": "Food"
+    }
+  ]
+}
