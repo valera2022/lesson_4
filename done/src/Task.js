@@ -35,6 +35,7 @@ export default function Task({task,onDelete,selected}) {
   return (
   <div  >
     <div className='tasklist'>
+      
      <ul>
       <li>
       {task.text}
