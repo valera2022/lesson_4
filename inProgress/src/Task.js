@@ -19,7 +19,8 @@ export default function Task({task,onDelete,selected}) {
            fetch(`http://localhost:4000/tasks/${task.id}`,
             {method:"DELETE"}
            )
-           .then(()=> console.log("deleted task"))
+           .then(()=> {console.log("deleted task")
+                        onDelete(task.id) })
   }
 
 

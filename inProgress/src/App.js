@@ -17,8 +17,10 @@ function App() {
   
   
 
-  function handleDeleteTask(){
-  
+  function handleDeleteTask(id){
+         console.log(id)
+         let notDeleted = tasks.filter((task)=> task.id !== id )
+         setTasks( notDeleted)
   }
 
   useEffect(()=>{
