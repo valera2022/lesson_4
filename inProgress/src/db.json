@@ -6,11 +6,6 @@
       "category": "Code"
     },
     {
-      "id": "5",
-      "text": "Get an ISA",
-      "category": "Money"
-    },
-    {
       "id": "6",
       "text": "Cook rice",
       "category": "Food"
@@ -23,6 +18,31 @@
     {
       "id": "9",
       "text": "Look out the window",
+      "category": "Misc"
+    },
+    {
+      "id": "5782",
+      "text": "Go visit somebody",
+      "category": "Misc"
+    },
+    {
+      "id": "d839",
+      "text": "Eat Buffalo pizza",
+      "category": "Food"
+    },
+    {
+      "id": "46b8",
+      "text": "Run 5 Miles",
+      "category": "Misc"
+    },
+    {
+      "id": "acf4",
+      "text": "Eat all the Empanadas",
+      "category": "Food"
+    },
+    {
+      "id": "2906",
+      "text": "Read a Book",
       "category": "Misc"
     }
   ]

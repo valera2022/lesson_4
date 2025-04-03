@@ -22,7 +22,7 @@ export default function Tasklist({tasks, onDelete,selected}) {
    
     return(
      <div> 
-      {filteredTasks.map((task)=>  <Task onDelete={onDelete} selected={selected} task={task} key={task.id}/>)} 
+      {filteredTasks.map((task)=> !task? null : <Task onDelete={onDelete} selected={selected} task={task} key={task.id}/>)} 
      </div>
     )
   

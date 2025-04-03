@@ -117,7 +117,8 @@ dialog:open {
 
 /* Closed state of the dialog   */
 dialog {
-  height: 30%;
+  border-radius: 10px;
+  height: 35%;
   width: 15%;
   background-color: rgb(74, 94, 185);
   opacity: 0;
@@ -218,4 +219,9 @@ because the nesting selector cannot represent pseudo-elements. */
 .cancel-new-task{
   border-radius: 10px;
   background-color: red;
+}
+
+input{
+  border-radius: 5px;
+  outline-color: gray;
 }
